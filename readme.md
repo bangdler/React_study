@@ -271,9 +271,9 @@ function App() {
 
 - 1번 클릭 시 render 는 1번 발생한다.
 
-   <img alt="img.png" height="100" src="img.png" width="100"/> 
+   <img alt="img.png" height="100" src="./screenShot/img.png" width="100"/> 
 
-   <img alt="img_1.png" height="100" src="img_1.png" width="100"/>
+   <img alt="img_1.png" height="100" src="./screenShot/img_1.png" width="100"/>
 
 ### batch update ?
 setState 가 비동기적으로 작동하는 이유는 일정 시간 동안 변화하는 상태를 모아 한 번에 렌더링 하기 위해서라고 한다.
@@ -288,7 +288,7 @@ setState 가 비동기적으로 작동하는 이유는 일정 시간 동안 변�
 
 - 한번 클릭 시
 
-  ![img_2.png](img_2.png)
+  ![img_2.png](./screenShot/img_2.png)
 ```javascript
 function App() {
     const [count1, setCount1] = useState(0);
@@ -336,19 +336,19 @@ useEffect 를 사용하여 fetch와 같이 네트워크 요청을 하는 경우,
  
 setTimeout 으로 fetch 요청에 약 2초간 delay 를 준 후, fetch 버튼 클릭 후 바로 숨기기를 클릭하면 화면에는 나타나는 게 없음에도 fetch 가 발생한다.
 
-<img alt="img_4.png" height="100" src="img_4.png" width="180"/>
+<img alt="img_4.png" height="100" src="./screenShot/img_4.png" width="180"/>
 <br>
-<img alt="img_3.png" height="350" src="img_3.png" width="200"/>
+<img alt="img_3.png" height="350" src="./screenShot/img_3.png" width="200"/>
 
 이 때 fetch 버튼이 포함된 컴포넌트의 useEffect 에 return 으로 fetch 요청 취소를 주어 해당 컴포넌트가 사라질 경우 요청을 취소해보았다.
 
 useEffect 에 abortController 를 생성하고, return 에서 abort 메서드를 실행한다.
 
 정상 fetch 요청한 경우
-![img_5.png](img_5.png)
+![img_5.png](./screenShot/img_5.png)
 
 fetch 요청 직후 숨기기 버튼 클릭하여 fetch 취소한 경우
-![img_6.png](img_6.png)
+![img_6.png](./screenShot/img_6.png)
 
 전체 코드
 ```javascript
